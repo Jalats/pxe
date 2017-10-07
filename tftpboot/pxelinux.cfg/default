@@ -1,0 +1,26 @@
+MENU BEGIN Utilities
+MENU TITLE Utilities
+LABEL Previous
+MENU LABEL Previous Menu
+TEXT HELP
+Return to previous menu
+ENDTEXT
+MENU EXIT
+MENU SEPARATOR
+MENU INCLUDE utilities/utilities.menu
+MENU END
+MENU BEGIN Ubuntu
+MENU TITLE Ubuntu
+LABEL Previous
+MENU LABEL Previous Menu
+TEXT HELP
+Return to previous menu
+ENDTEXT
+MENU EXIT
+MENU SEPARATOR
+MENU INCLUDE ubuntu1204/ubuntu.menu
+MENU END
+ENDTEXT
+LABEL Abort
+         MENU LABEL Exit
+         KERNEL abortpxelinux.0
