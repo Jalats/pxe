@@ -1,0 +1,27 @@
+LABEL Hiren
+MENU LABEL Hiren
+root (hd0,0)
+	KERNEL hiren1/memdisk iso
+        APPEND iso initrd=hiren1/Hiren.iso
+ENDTEXT
+
+label pmagic
+KERNEL partedmagic/memdisk
+        KERNEL /utilities/pmagic/memdisk
+        INITRD /utilities/pmagic/pmagic_2013_08_01.iso        
+ENDTEXT
+
+LABEL Autonuke
+	KERNEL /utilities/autonuke/dban.bzi
+	APPEND nuke="dwipe --autonuke" silent
+ENDTEXT
+
+LABEL Ubcd
+        KERNEL /utilities/ubcd/memdisk
+        APPEND iso initrd=/utilities/ubcd/ubcd537.iso raw
+ENDTEXT
+
+label Hiren
+        KERNEL /utilities/hiren/memdisk
+        APPEND iso initrd=/utilities/hiren/hiren.iso raw
+ENDTEXT
